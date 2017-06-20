@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <title>User directory</title>
+  </head>
+  <body>
+    <h1>Index</h1>
+    <div class="userRow">
+      {{#users}}
+      <div class="userBox">
+        <img src="{{avatar}}" alt="">
+        <p class="topName">{{name}}</p>
+        <p class="description">{{job}}{{company}}</p>
+      </div>
+      {{/users}}
+   </div>
+
+    <div class="bottomSection">
+       {{#users}}
+        <div class="userBottom">
+          <div>
+            <img class="imagecircle" src="{{avatar}}">
+          </div>
+          <div>
+            <h2>{{name}}</h2>
+            <p>{{address.city}}{{address.country}}|{{job}}{{company}}</p>
+            <p>{{email}}|{{phone}}</p>
+          </div>
+        </div>
+        <div class="bottomBox">
+          <p><strong>Education</strong> {{university}}</p>
+          <p><strong>Skills</strong> {{skills}}</p>
+        </div>
+        {{/users}}
+    </div>
+
+ </body>
+</html>
